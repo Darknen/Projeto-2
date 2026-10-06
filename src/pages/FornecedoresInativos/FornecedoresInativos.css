@@ -1,0 +1,80 @@
+/* ===== Fornecedores - listagem ===== */
+.app-content { min-width: 0; }
+.condominios-page { width: 100%; min-width: 0; box-sizing: border-box; }
+.fornecedores-table { width: 100%; table-layout: fixed; }
+.fornecedores-table th,
+.fornecedores-table td { white-space: normal; vertical-align: middle; overflow-wrap: anywhere; }
+.fornecedores-table th:nth-child(1), .fornecedores-table td:nth-child(1) { width: 29%; }
+.fornecedores-table th:nth-child(2), .fornecedores-table td:nth-child(2) { width: 29%; }
+.fornecedores-table th:nth-child(3), .fornecedores-table td:nth-child(3) { width: 17%; }
+.fornecedores-table th:nth-child(4), .fornecedores-table td:nth-child(4) { width: 15%; }
+.fornecedores-table th:nth-child(5), .fornecedores-table td:nth-child(5) { width: 10%; text-align: center; }
+.fornecedores-table .fornecedor-nome { display:block; line-height:1.3; color:#111827; }
+.fornecedores-table .fornecedor-razao { display:block; margin-top:4px; color:#6b7280; font-size:12px; line-height:1.3; }
+.fornecedores-table .nowrap { white-space:nowrap; overflow-wrap:normal; }
+.fornecedores-table .table-actions { justify-content:center; white-space:nowrap; }
+
+@media (max-width: 1000px) {
+  .fornecedores-table th:nth-child(4), .fornecedores-table td:nth-child(4) { display:none; }
+  .fornecedores-table th:nth-child(1), .fornecedores-table td:nth-child(1) { width:34%; }
+  .fornecedores-table th:nth-child(2), .fornecedores-table td:nth-child(2) { width:32%; }
+  .fornecedores-table th:nth-child(3), .fornecedores-table td:nth-child(3) { width:22%; }
+  .fornecedores-table th:nth-child(5), .fornecedores-table td:nth-child(5) { width:12%; }
+}
+
+/* ===== Fornecedores inativos - padrão visual do ERP ===== */
+.btn-voltar-fornecedores {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 14px;
+  border:1px solid #bfdbfe;
+  border-radius:8px;
+  background:#eff6ff;
+  color:#2563eb;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  transition:background .18s ease,color .18s ease,border-color .18s ease;
+}
+.btn-voltar-fornecedores:hover {
+  background:#dbeafe;
+  color:#1d4ed8;
+  border-color:#93c5fd;
+}
+
+.fornecedores-table .btn-reactivate {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  padding:7px 11px;
+  border:1px solid #bbf7d0;
+  border-radius:8px;
+  background:#f0fdf4;
+  color:#15803d;
+  font-size:13px;
+  font-weight:600;
+  cursor:pointer;
+  transition:background .18s ease,color .18s ease,border-color .18s ease;
+}
+.fornecedores-table .btn-reactivate:hover {
+  background:#dcfce7;
+  color:#166534;
+  border-color:#86efac;
+}
+
+/* Tipografia compacta igual às demais listagens */
+.condominios-page .fornecedores-table {
+  font-size:14px;
+}
+.condominios-page .fornecedores-table th {
+  font-size:11px;
+}
+.condominios-page .fornecedores-table td {
+  font-size:14px;
+}
+
+
+
