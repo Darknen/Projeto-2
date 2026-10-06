@@ -1,0 +1,132 @@
+/* ===== Botão de acesso aos registros inativos - âmbar suave ===== */
+.btn-inativos {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 14px;
+  border:1px solid #fde68a;
+  border-radius:8px;
+  background:#fffbeb;
+  color:#b45309;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  transition:background .18s ease,color .18s ease,border-color .18s ease,box-shadow .18s ease;
+}
+
+.btn-inativos:hover {
+  background:#fef3c7;
+  color:#92400e;
+  border-color:#fcd34d;
+  box-shadow:0 1px 2px rgba(217,119,6,.10);
+}
+
+
+/* ===== Funcionários inativos: botão Voltar para funcionários ===== */
+.btn-voltar-funcionarios {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 14px;
+  border:1px solid #bfdbfe;
+  border-radius:8px;
+  background:#eff6ff;
+  color:#2563eb;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  transition:background .18s ease,color .18s ease,border-color .18s ease;
+}
+
+.btn-voltar-funcionarios:hover {
+  background:#dbeafe;
+  color:#1d4ed8;
+  border-color:#93c5fd;
+}
+
+
+
+/* ===== Funcionários inativos - layout e cores corrigidos ===== */
+.funcionarios-inativos-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.funcionarios-inativos-table th,
+.funcionarios-inativos-table td {
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+.funcionarios-inativos-table th {
+  font-size: 11px;
+  color: #667085;
+  background: #f8fafc;
+}
+
+.funcionarios-inativos-table .table-actions {
+  justify-content: center;
+}
+
+/* Reativar: verde claro = ação positiva */
+.funcionarios-inativos-table .btn-reactivate {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 11px;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  background: #f0fdf4;
+  color: #15803d;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;
+}
+
+.funcionarios-inativos-table .btn-reactivate:hover {
+  background: #dcfce7;
+  color: #166534;
+  border-color: #86efac;
+  transform: translateY(-1px);
+}
+
+/* Voltar: azul claro = navegação */
+.btn-voltar-funcionarios {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 13px;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .18s ease, color .18s ease, border-color .18s ease;
+}
+
+.btn-voltar-funcionarios:hover {
+  background: #dbeafe;
+  color: #1d4ed8;
+  border-color: #93c5fd;
+}
+
+/* Busca no mesmo padrão compacto das listagens */
+.condominios-page .search-bar .btn-secondary {
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .funcionarios-inativos-table th:nth-child(3),
+  .funcionarios-inativos-table td:nth-child(3) {
+    display: none;
+  }
+}
+

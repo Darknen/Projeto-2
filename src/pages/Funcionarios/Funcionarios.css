@@ -1,0 +1,58 @@
+/* ===== Funcionários - listagens ===== */
+.funcionarios-table,
+.funcionarios-inativos-table { width:100%; table-layout:fixed; }
+
+.funcionarios-table th, .funcionarios-table td,
+.funcionarios-inativos-table th, .funcionarios-inativos-table td {
+  white-space:normal; vertical-align:middle; overflow-wrap:anywhere;
+}
+
+.funcionarios-table th:nth-child(1), .funcionarios-table td:nth-child(1) { width:14%; }
+.funcionarios-table th:nth-child(2), .funcionarios-table td:nth-child(2) { width:30%; }
+.funcionarios-table th:nth-child(3), .funcionarios-table td:nth-child(3) { width:13%; }
+.funcionarios-table th:nth-child(4), .funcionarios-table td:nth-child(4) { width:10%; }
+.funcionarios-table th:nth-child(5), .funcionarios-table td:nth-child(5) { width:11%; }
+.funcionarios-table th:nth-child(6), .funcionarios-table td:nth-child(6) { width:12%; }
+.funcionarios-table th:nth-child(7), .funcionarios-table td:nth-child(7) { width:10%; text-align:center; }
+
+.funcionarios-inativos-table th:nth-child(1), .funcionarios-inativos-table td:nth-child(1) { width:16%; }
+.funcionarios-inativos-table th:nth-child(2), .funcionarios-inativos-table td:nth-child(2) { width:31%; }
+.funcionarios-inativos-table th:nth-child(3), .funcionarios-inativos-table td:nth-child(3) { width:15%; }
+.funcionarios-inativos-table th:nth-child(4), .funcionarios-inativos-table td:nth-child(4) { width:13%; }
+.funcionarios-inativos-table th:nth-child(5), .funcionarios-inativos-table td:nth-child(5) { width:13%; }
+.funcionarios-inativos-table th:nth-child(6), .funcionarios-inativos-table td:nth-child(6) { width:12%; text-align:center; }
+
+.funcionarios-table .table-actions,
+.funcionarios-inativos-table .table-actions { justify-content:center; white-space:nowrap; }
+
+.funcionarios-table td:nth-child(3),
+.funcionarios-table td:nth-child(5),
+.funcionarios-table td:nth-child(6),
+.funcionarios-inativos-table td:nth-child(3),
+.funcionarios-inativos-table td:nth-child(5) {
+  white-space:nowrap; overflow-wrap:normal;
+}
+
+/* ===== Funcionários: mesmo padrão visual da tela de Condomínios ===== */
+.funcionarios-table .condo-action-view {
+  color:#2563eb; background:#eff6ff; border-color:#bfdbfe;
+}
+.funcionarios-table .condo-action-view:hover {
+  color:#1d4ed8; background:#dbeafe; border-color:#93c5fd;
+}
+.funcionarios-table .condo-action-edit {
+  color:#d97706; background:#fffbeb; border-color:#fde68a;
+}
+.funcionarios-table .condo-action-edit:hover {
+  color:#b45309; background:#fef3c7; border-color:#fcd34d;
+}
+.funcionarios-table .condo-action-disable {
+  color:#dc2626; background:#fef2f2; border-color:#fecaca;
+}
+.funcionarios-table .condo-action-disable:hover {
+  color:#b91c1c; background:#fee2e2; border-color:#fca5a5;
+}
+.funcionarios-table .condo-action-btn { width:30px; height:30px; flex:0 0 30px; }
+.funcionarios-table .condo-action-btn i { font-size:13px; }
+
+
