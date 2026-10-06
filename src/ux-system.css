@@ -1,0 +1,127 @@
+/* =========================================================
+   CondoPrime — padronização UX/UI
+   Mantém geometria/layout existente e unifica somente a
+   hierarquia tipográfica e a legibilidade dos componentes.
+   Referência: Dashboard + listagem de Condomínios aprovados.
+   ========================================================= */
+
+:root {
+  --cp-title: 23px;
+  --cp-section-title: 14px;
+  --cp-body: 13px;
+  --cp-label: 12px;
+  --cp-helper: 11px;
+  --cp-badge: 11px;
+}
+
+/* Cabeçalhos de página */
+.condominios-heading h1,
+.condominio-form-page .page-header h2,
+.condominio-detalhe-header h2 { font-size: var(--cp-title); }
+
+.condominios-heading p,
+.condominio-form-page .page-header p,
+.condominio-detalhe-header p { font-size: var(--cp-body); }
+
+/* Dashboard: mesma escala do restante do produto */
+.dashboard-welcome h2 { font-size: 20px; }
+.dashboard-welcome p { font-size: 13px; }
+.dashboard-welcome > span { font-size: 11px; }
+.recent-card-header h3 { font-size: var(--cp-section-title); }
+.recent-card-header a { font-size: var(--cp-helper); }
+.recent-card th { font-size: var(--cp-helper); }
+.recent-card td { font-size: var(--cp-body); }
+.recent-status { font-size: var(--cp-badge); }
+
+/* Listagens principais */
+.condominios-table th,
+.funcionarios-table th,
+.funcionarios-inativos-table th,
+.fornecedores-table th { font-size: var(--cp-label) !important; }
+
+.condominios-table td,
+.funcionarios-table td,
+.funcionarios-inativos-table td,
+.fornecedores-table td { font-size: var(--cp-body) !important; }
+
+.condominios-status,
+.vinculo-badge,
+.unit-badge { font-size: var(--cp-badge) !important; }
+
+.condominios-footer,
+.condominios-pagination button { font-size: var(--cp-label); }
+
+/* Formulários */
+.condominio-form-block h3,
+.condominio-detalhe-page .section-toolbar h3 { font-size: var(--cp-section-title); }
+
+.condominio-field label,
+.condominio-field > span,
+.mini-grid label { font-size: var(--cp-label); }
+
+.condominio-field input,
+.condominio-field select,
+.mini-grid input,
+.mini-grid select,
+.mini-grid textarea { font-size: var(--cp-body); }
+
+.field-status,
+.condominio-status-row,
+.condominio-detalhe-page .section-toolbar p { font-size: var(--cp-helper); }
+
+.condominio-form-footer .btn-secondary,
+.condominio-form-footer .btn-primary,
+.detail-back-btn,
+.detail-edit-btn,
+.detail-actions-btn,
+.section-toolbar .btn-primary,
+.form-actions button { font-size: var(--cp-label); }
+
+/* Detalhe do condomínio — aba Dados */
+.condominio-detalhe-page .details-card::before { font-size: 14px !important; }
+.condominio-detalhe-page .details-grid dt { font-size: 12px !important; }
+.condominio-detalhe-page .details-grid dd { font-size: 13px !important; }
+
+/* Abas */
+.condo-tabs-modern button { font-size: var(--cp-label); }
+.tab-count { font-size: 10px; }
+
+/* Tabelas internas do condomínio */
+.condominio-detalhe-page .data-table th,
+.condominio-detalhe-page .recent-table th,
+.condominio-detalhe-page .tabela-padrao-veiculos th,
+.condominio-detalhe-page .unidades-table th,
+.condominio-detalhe-page .fornecedores-table th { font-size: var(--cp-label) !important; }
+
+.condominio-detalhe-page .data-table td,
+.condominio-detalhe-page .recent-table td,
+.condominio-detalhe-page .tabela-padrao-veiculos td,
+.condominio-detalhe-page .unidades-table td,
+.condominio-detalhe-page .fornecedores-table td { font-size: var(--cp-body) !important; }
+
+.condominio-detalhe-page .situation-badge,
+.condominio-detalhe-page .view-unit-btn,
+.condominio-detalhe-page .overview-card-head button { font-size: var(--cp-helper); }
+
+/* Cards de resumo da visão geral, quando utilizados */
+.condominio-detalhe-page .overview-card h3 { font-size: var(--cp-section-title); }
+.condominio-detalhe-page .info-summary-item small,
+.condominio-detalhe-page .summary-card small { font-size: var(--cp-helper); }
+.condominio-detalhe-page .info-summary-item strong { font-size: var(--cp-body); }
+.condominio-detalhe-page .info-summary-item em { font-size: var(--cp-helper); }
+
+/* Estados vazios e mensagens */
+.empty-row,
+.empty-state,
+.condominios-loading,
+.condominios-empty,
+.dashboard-alert { font-size: var(--cp-body); }
+
+/* Responsividade: mantém legibilidade sem mudar a estrutura aprovada */
+@media (max-width: 600px) {
+  .condominios-heading h1,
+  .condominio-form-page .page-header h2,
+  .condominio-detalhe-header h2 { font-size: 20px; }
+
+  .condo-tabs-modern button { font-size: 11px; }
+}
