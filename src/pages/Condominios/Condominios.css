@@ -1,0 +1,237 @@
+.condominios-page {
+  width: 100%;
+  padding: 26px 28px 40px;
+  color: #0f172a;
+}
+
+.condominios-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.condominios-heading h1 {
+  margin: 0 0 4px;
+  font-size: 25px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.35px;
+}
+
+.condominios-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.condominios-new-btn {
+  min-height: 36px;
+  padding: 0 15px;
+  border: 1px solid #0b67f0;
+  border-radius: 5px;
+  background: #0b67f0;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(11, 103, 240, .16);
+  transition: .18s ease;
+}
+
+.condominios-new-btn:hover {
+  background: #075bd8;
+  border-color: #075bd8;
+}
+
+.condominios-search {
+  position: relative;
+  width: min(100%, 480px);
+  margin-bottom: 17px;
+}
+
+.condominios-search i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 13px;
+  pointer-events: none;
+}
+
+.condominios-search input {
+  width: 100%;
+  height: 36px;
+  padding: 0 13px 0 34px;
+  border: 1px solid #d9e2ef;
+  border-radius: 5px;
+  outline: none;
+  background: #fff;
+  color: #334155;
+  font-size: 13px;
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+
+.condominios-search input::placeholder { color: #94a3b8; }
+
+.condominios-search input:focus {
+  border-color: #8db9f8;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, .08);
+}
+
+.condominios-card {
+  overflow: hidden;
+  border: 1px solid #dce5f1;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, .035);
+}
+
+.condominios-table-wrap { overflow-x: auto; }
+
+.condominios-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.condominios-table th {
+  height: 40px;
+  padding: 0 14px;
+  border-bottom: 1px solid #e6edf5;
+  background: #fbfcfe;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  white-space: nowrap;
+}
+
+.condominios-table td {
+  height: 50px;
+  padding: 0 14px;
+  border-bottom: 1px solid #edf2f7;
+  color: #334155;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.condominios-table tbody tr:last-child td { border-bottom: 0; }
+.condominios-table tbody tr:hover { background: #fbfdff; }
+
+.condominios-table th:nth-child(1), .condominios-table td:nth-child(1) { width: 38%; }
+.condominios-table th:nth-child(2), .condominios-table td:nth-child(2) { width: 19%; }
+.condominios-table th:nth-child(3), .condominios-table td:nth-child(3) { width: 22%; }
+.condominios-table th:nth-child(4), .condominios-table td:nth-child(4) { width: 10%; }
+.condominios-table th:nth-child(5), .condominios-table td:nth-child(5) { width: 11%; text-align: center; }
+
+.condominio-name {
+  color: #1e293b !important;
+  font-weight: 500;
+}
+
+.condominios-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  height: 19px;
+  padding: 0 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.condominios-status.is-active { background: #dcfce7; color: #16a34a; }
+.condominios-status.is-inactive { background: #f1f5f9; color: #64748b; }
+
+.condominios-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.condominios-action {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 12px;
+  transition: background .15s ease, color .15s ease;
+}
+
+.condominios-action.view,
+.condominios-action.edit { color: #0b67f0; }
+.condominios-action.delete { color: #ef4444; }
+.condominios-action.view:hover,
+.condominios-action.edit:hover { background: #eff6ff; }
+.condominios-action.delete:hover { background: #fef2f2; }
+
+.condominios-footer {
+  min-height: 44px;
+  padding: 0 14px;
+  border-top: 1px solid #edf2f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.condominios-pagination { display: flex; align-items: center; gap: 3px; }
+
+.condominios-pagination button {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  background: #fff;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.condominios-pagination button.active {
+  border-color: #0b67f0;
+  background: #0b67f0;
+  color: #fff;
+}
+
+.condominios-pagination button:disabled { opacity: .45; }
+
+.condominios-loading,
+.condominios-empty {
+  padding: 44px 20px;
+  text-align: center;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.condominios-empty > i { margin-bottom: 10px; color: #94a3b8; font-size: 26px; }
+.condominios-empty h3 { margin: 0 0 5px; color: #1e293b; font-size: 15px; }
+.condominios-empty p { margin: 0 0 15px; }
+
+.condominios-page .alert { margin-bottom: 14px; }
+
+@media (max-width: 760px) {
+  .condominios-page { padding: 20px 16px 30px; }
+  .condominios-heading { align-items: stretch; flex-direction: column; }
+  .condominios-new-btn { align-self: flex-start; }
+  .condominios-search { width: 100%; }
+  .condominios-table { min-width: 720px; }
+}

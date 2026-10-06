@@ -1,0 +1,1489 @@
+.condominio-detalhe-page{padding:20px 22px 28px}.condominio-detalhe-header{align-items:flex-start;margin-bottom:12px}.condominio-detalhe-header h2{font-size:23px;margin:0 0 4px}.condominio-detalhe-header p{font-size:12px;margin:0;color:#73819a}.condominio-detalhe-header .page-actions{display:flex;gap:8px}.detail-back-btn,.detail-edit-btn{height:32px;padding:0 12px;font-size:11px;border-radius:5px;display:inline-flex;align-items:center;gap:6px}.condo-tabs-modern{display:flex;gap:20px;border-bottom:1px solid #dfe7f1;margin-bottom:15px;overflow:auto}.condo-tabs-modern button{border:0;background:transparent;padding:10px 2px 9px;color:#68778f;font-size:10px;font-weight:600;display:flex;align-items:center;gap:5px;white-space:nowrap;border-bottom:2px solid transparent;cursor:pointer}.condo-tabs-modern button.active{color:#0877f9;border-bottom-color:#0877f9}.tab-count{background:#eef4ff;color:#0877f9;border-radius:10px;padding:1px 5px;font-size:9px}.details-card{background:#fff;border:1px solid #e2e9f2;border-radius:7px;padding:16px}.details-card:before{content:'Informações do condomínio';display:block;font-size:12px;font-weight:700;color:#25324a;margin-bottom:13px}.details-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0}.details-grid>div{border:1px solid #e7edf5;border-radius:6px;padding:12px;background:#fff}.details-grid dt{font-size:9px;text-transform:uppercase;color:#8a97aa;margin-bottom:5px}.details-grid dd{margin:0;font-size:11px;font-weight:600;color:#2d3a50}.tab-panel{background:#fff;border:1px solid #e2e9f2;border-radius:7px;padding:14px}.section-toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.section-toolbar h3{font-size:13px;margin:0 0 3px}.section-toolbar p{font-size:10px;color:#7a8799;margin:0}.section-toolbar .btn-primary{height:32px;padding:0 12px;font-size:10px;border-radius:5px}.inline-form{background:#f8fbff;border:1px solid #e3ebf5;border-radius:6px;padding:13px;margin-bottom:13px}.mini-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.mini-grid label{font-size:10px;font-weight:600;color:#526079;display:flex;flex-direction:column;gap:5px}.mini-grid label.wide{grid-column:span 2}.mini-grid input,.mini-grid select,.mini-grid textarea{border:1px solid #dce5ef;border-radius:5px;min-height:33px;padding:7px 9px;font:inherit;font-size:11px;background:#fff}.form-actions{display:flex;justify-content:flex-end;gap:7px;margin-top:10px}.form-actions button{height:31px;font-size:10px}.table-container{border:1px solid #e2e9f2;border-radius:6px;overflow:hidden}.data-table{width:100%;border-collapse:collapse}.data-table th{background:#f8fafc;color:#6e7d93;font-size:9px;text-transform:uppercase;text-align:left;padding:9px 10px}.data-table td{font-size:10px;color:#334158;padding:9px 10px;border-top:1px solid #edf1f6}.table-actions{display:flex;gap:5px}.action-icon{width:25px;height:25px;border:0;border-radius:5px;cursor:pointer}.action-edit{background:#eef5ff;color:#0877f9}.action-delete{background:#fff0f1;color:#f04c55}.unit-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.unit-card{border:1px solid #e3eaf2;border-radius:6px;padding:12px}.unit-head{display:flex;justify-content:space-between}.unit-head strong{font-size:11px}.unit-head small,.unit-summary span{font-size:9px;color:#77859a}.unit-summary{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}.unit-summary>div{display:flex;flex-direction:column;gap:4px}.unit-summary b{font-size:9px;color:#59677c}.empty-row,.empty-state{padding:18px;text-align:center;color:#8793a4;font-size:10px}@media(max-width:850px){.details-grid{grid-template-columns:1fr 1fr}.mini-grid{grid-template-columns:1fr 1fr}.unit-cards{grid-template-columns:1fr}}@media(max-width:600px){.condominio-detalhe-page{padding:14px}.details-grid,.mini-grid{grid-template-columns:1fr}.mini-grid label.wide{grid-column:auto}.condominio-detalhe-header{flex-direction:column;gap:10px}}
+
+
+/* Visão geral — layout aprovado CondoPrime */
+.condominio-detalhe-page{max-width:none}
+.detail-title-line{display:flex;align-items:center;gap:8px}
+.detail-title-line h2{font-size:20px}
+.detail-status{font-size:8px;font-weight:700;padding:3px 7px;border-radius:12px}
+.detail-status.active{color:#169b55;background:#e7f8ee}
+.detail-status.inactive{color:#68778f;background:#eef1f5}
+.detail-actions-btn{height:30px;padding:0 10px;font-size:9px;border:1px solid #d9e2ee;background:#fff;color:#42516a;border-radius:5px;display:inline-flex;align-items:center;gap:6px}
+.condominio-detalhe-header .page-actions{align-items:center}
+.condo-tabs-modern{gap:24px;margin-bottom:13px}
+.condo-tabs-modern button{font-size:9px;padding:8px 2px}
+.overview-stack{display:flex;flex-direction:column;gap:11px}
+.overview-card{background:#fff;border:1px solid #e1e8f1;border-radius:6px;padding:12px 13px}
+.overview-card h3{font-size:11px;margin:0 0 11px;color:#25324a}
+.info-summary-grid{display:grid;grid-template-columns:1.15fr 1fr 1.5fr;gap:10px}
+.info-summary-item{min-height:55px;border:1px solid #e6edf5;border-radius:6px;padding:9px 10px;display:flex;align-items:center;gap:9px}
+.info-icon{width:30px;height:30px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px}
+.info-icon.blue{background:#eef5ff;color:#0877f9}
+.info-summary-item div{display:flex;flex-direction:column;min-width:0}
+.info-summary-item small{font-size:8px;color:#8a97aa;margin-bottom:3px}
+.info-summary-item strong{font-size:9px;color:#2b3950;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.info-summary-item em{font-style:normal;font-size:8px;color:#75849a;margin-top:2px}
+.summary-cards{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}
+.summary-card{border:1px solid #e7edf5;border-radius:6px;padding:9px 10px;display:flex;align-items:center;gap:8px}
+.summary-card>span{width:29px;height:29px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px}
+.summary-card div{display:flex;flex-direction:column}
+.summary-card strong{font-size:14px;line-height:1;color:#27364d}
+.summary-card small{font-size:7px;margin-top:4px;color:#7b899d}
+.summary-card.blue>span{background:#edf5ff;color:#0877f9}
+.summary-card.green>span{background:#eaf9f1;color:#1da968}
+.summary-card.purple>span{background:#f3efff;color:#7658d9}
+.summary-card.orange>span{background:#fff4e8;color:#ef8c25}
+.summary-card.slate>span{background:#eef3f8;color:#55708f}
+.overview-card-head{display:flex;align-items:center;justify-content:space-between}
+.overview-card-head h3{margin-bottom:8px}
+.overview-card-head button{border:0;background:transparent;color:#0877f9;font-size:8px;font-weight:600;cursor:pointer}
+.recent-table-wrap{border:1px solid #e6edf5;border-radius:5px;overflow:hidden}
+.recent-table{width:100%;border-collapse:collapse}
+.recent-table th{background:#f8fafc;text-align:left;text-transform:uppercase;color:#7a8799;font-size:7px;padding:7px 8px}
+.recent-table td{border-top:1px solid #edf1f6;color:#34435a;font-size:8px;padding:7px 8px}
+.situation-badge{font-size:7px;font-weight:700;padding:3px 7px;border-radius:10px}
+.situation-badge.occupied{background:#e7f8ee;color:#159958}
+.situation-badge.available{background:#eef1f5;color:#65748a}
+.view-unit-btn{border:0;background:transparent;color:#0877f9;font-size:8px;cursor:pointer;padding:0}
+@media(max-width:900px){.info-summary-grid{grid-template-columns:1fr}.summary-cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.summary-cards{grid-template-columns:1fr}.recent-table-wrap{overflow-x:auto}.recent-table{min-width:620px}}
+
+/* Correção de largura — conteúdo das abas ocupa toda a área útil */
+.condominio-detalhe-page,
+.tab-panel,
+.table-container,
+.data-table,
+.unit-cards,
+.unit-card {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+/* As unidades devem acompanhar toda a largura do painel, sem terminar na metade */
+.unit-cards {
+  grid-template-columns: 1fr;
+}
+
+/* Alinhamento do cabeçalho com os dados — Unidades recentes */
+.recent-table {
+  table-layout: fixed;
+}
+.recent-table th,
+.recent-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+.recent-table th:first-child,
+.recent-table td:first-child {
+  text-align: left;
+}
+.recent-table th:last-child,
+.recent-table td:last-child {
+  text-align: center;
+}
+.recent-table th:nth-child(1), .recent-table td:nth-child(1) { width: 15%; }
+.recent-table th:nth-child(2), .recent-table td:nth-child(2) { width: 15%; }
+.recent-table th:nth-child(3), .recent-table td:nth-child(3) { width: 17%; }
+.recent-table th:nth-child(4), .recent-table td:nth-child(4) { width: 17%; }
+.recent-table th:nth-child(5), .recent-table td:nth-child(5) { width: 23%; }
+.recent-table th:nth-child(6), .recent-table td:nth-child(6) { width: 13%; }
+
+/* Mantém o botão de ação centralizado dentro da coluna */
+.recent-table td:last-child .view-unit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+
+/* Ajuste fino: textos um pouco maiores */
+.condominio-detalhe-page .recent-table th {
+  font-size: 8px;
+}
+
+.condominio-detalhe-page .recent-table td {
+  font-size: 9px;
+}
+
+.condominio-detalhe-page .overview-card h3 {
+  font-size: 12px;
+}
+
+.condominio-detalhe-page .info-summary-item small,
+.condominio-detalhe-page .summary-card small {
+  font-size: 8px;
+}
+
+.condominio-detalhe-page .info-summary-item strong {
+  font-size: 10px;
+}
+
+.condominio-detalhe-page .overview-card-head button,
+.condominio-detalhe-page .view-unit-btn {
+  font-size: 9px;
+}
+
+.condominio-detalhe-page .situation-badge {
+  font-size: 8px;
+}
+
+/* Aba Unidades — correção visual */
+.condominio-detalhe-page .unit-card { width: 100%; }
+
+.condominio-detalhe-page .unit-head {
+  align-items: center;
+}
+
+.condominio-detalhe-page .unit-head > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.condominio-detalhe-page .unit-head strong {
+  display: inline-block;
+  font-size: 11px;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.condominio-detalhe-page .unit-head small {
+  display: inline-block;
+  margin: 0;
+  font-size: 9px;
+  line-height: 1.35;
+  color: #65748a;
+  white-space: nowrap;
+}
+
+.condominio-detalhe-page .unit-summary {
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+.condominio-detalhe-page .unit-summary > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.condominio-detalhe-page .unit-summary b {
+  width: 100%;
+  margin-bottom: 3px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.condominio-detalhe-page .unit-summary span {
+  font-size: 9px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.condominio-detalhe-page .unit-summary span small {
+  font-size: 8px;
+}
+
+.condominio-detalhe-page .section-toolbar h3 { font-size: 13px; }
+.condominio-detalhe-page .section-toolbar p { font-size: 9px; }
+
+
+/* =========================================================
+   ABA UNIDADES — layout aprovado
+   Linha 1: Bloco + Unidade | Tipo/Situação | Ações
+   Linha 2: Moradores      | Veículos      | Ações
+   ========================================================= */
+
+.condominio-detalhe-page .unit-card-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, .85fr) 72px;
+  gap: 28px;
+  width: 100%;
+  padding: 15px 18px;
+  align-items: stretch;
+}
+
+.condominio-detalhe-page .unit-card-left,
+.condominio-detalhe-page .unit-card-right {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 15px;
+  min-width: 0;
+}
+
+.condominio-detalhe-page .unit-top-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 44px;
+}
+
+.condominio-detalhe-page .unit-top-right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.condominio-detalhe-page .unit-field,
+.condominio-detalhe-page .unit-bottom-left,
+.condominio-detalhe-page .unit-bottom-right {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.condominio-detalhe-page .unit-field b,
+.condominio-detalhe-page .unit-bottom-left > b,
+.condominio-detalhe-page .unit-bottom-right > b {
+  display: block;
+  margin: 0 0 5px;
+  color: #7a8799;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.condominio-detalhe-page .unit-field span {
+  color: #2b3950;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.condominio-detalhe-page .unit-type-field {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+.condominio-detalhe-page .unit-bottom-left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.condominio-detalhe-page .unit-bottom-right {
+  align-items: center;
+  text-align: center;
+}
+
+.condominio-detalhe-page .unit-values {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.condominio-detalhe-page .unit-values span {
+  color: #34435a;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.condominio-detalhe-page .unit-values span small {
+  font-size: 9px;
+  color: #748297;
+}
+
+.condominio-detalhe-page .unit-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  align-self: stretch;
+}
+
+/* Neutraliza o layout antigo somente dentro do novo card */
+.condominio-detalhe-page .unit-card-layout .unit-head,
+.condominio-detalhe-page .unit-card-layout .unit-summary {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .condominio-detalhe-page .unit-card-layout {
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+  }
+
+  .condominio-detalhe-page .unit-card-right {
+    grid-column: 1;
+  }
+
+  .condominio-detalhe-page .unit-card-actions {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .condominio-detalhe-page .unit-top-left {
+    gap: 28px;
+  }
+
+  .condominio-detalhe-page .unit-top-right,
+  .condominio-detalhe-page .unit-type-field,
+  .condominio-detalhe-page .unit-bottom-right {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+
+/* Ajuste fino — centralização das labels com seus respectivos dados */
+.condominio-detalhe-page .unit-top-left {
+  align-items: flex-start;
+}
+
+.condominio-detalhe-page .unit-top-left .unit-field {
+  align-items: center;
+  text-align: center;
+}
+
+.condominio-detalhe-page .unit-type-field {
+  align-items: center;
+  text-align: center;
+}
+
+.condominio-detalhe-page .unit-bottom-left {
+  align-items: center;
+  text-align: center;
+}
+
+.condominio-detalhe-page .unit-bottom-left > b,
+.condominio-detalhe-page .unit-bottom-right > b {
+  text-align: center;
+}
+
+.condominio-detalhe-page .unit-bottom-left .unit-values,
+.condominio-detalhe-page .unit-bottom-right .unit-values {
+  align-items: center;
+  text-align: center;
+}
+
+.condominio-detalhe-page .unit-bottom-left .unit-values span,
+.condominio-detalhe-page .unit-bottom-right .unit-values span {
+  text-align: center;
+}
+
+.condominio-detalhe-page .unit-bottom-right {
+  align-items: center;
+  text-align: center;
+}
+
+
+/* Ajuste fino: mantém os dados exatamente na posição atual.
+   Centraliza apenas as labels em relação aos respectivos conteúdos. */
+
+.condominio-detalhe-page .unit-bottom-left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.condominio-detalhe-page .unit-bottom-left > b {
+  width: 100%;
+  text-align: center;
+}
+
+.condominio-detalhe-page .unit-bottom-left .unit-values {
+  width: 100%;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.condominio-detalhe-page .unit-bottom-left .unit-values span {
+  width: 100%;
+  text-align: left;
+}
+
+/* Bloco e Unidade: label centralizada sobre o próprio valor */
+.condominio-detalhe-page .unit-top-left .unit-field {
+  align-items: center;
+  text-align: center;
+}
+
+/* Tipo/Situação e Veículos: somente labels centralizadas */
+.condominio-detalhe-page .unit-type-field > b,
+.condominio-detalhe-page .unit-bottom-right > b {
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Morador: permanece abaixo de Bloco/Unidade.
+   Centraliza somente a label sobre o nome, sem levar o bloco ao centro da tela. */
+.condominio-detalhe-page .unit-bottom-left {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+  justify-self: start;
+  align-self: start;
+  align-items: stretch;
+  text-align: left;
+}
+
+.condominio-detalhe-page .unit-bottom-left > b {
+  width: auto;
+  text-align: center;
+}
+
+.condominio-detalhe-page .unit-bottom-left .unit-values {
+  width: auto;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.condominio-detalhe-page .unit-bottom-left .unit-values span {
+  width: auto;
+  text-align: left;
+}
+
+
+/* Aba Moradores — centraliza cabeçalhos e respectivos dados */
+.condominio-detalhe-page .tab-panel .data-table th,
+.condominio-detalhe-page .tab-panel .data-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Ações centralizadas dentro da própria coluna */
+.condominio-detalhe-page .tab-panel .data-table .table-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+
+/* Aba Moradores — layout final */
+.condominio-detalhe-page .moradores-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.condominio-detalhe-page .moradores-table th,
+.condominio-detalhe-page .moradores-table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Nome permanece alinhado à esquerda */
+.condominio-detalhe-page .moradores-table th:first-child,
+.condominio-detalhe-page .moradores-table td:first-child {
+  width: 28%;
+  text-align: left;
+}
+
+/* Bloco e Unidade separados */
+.condominio-detalhe-page .moradores-table th:nth-child(2),
+.condominio-detalhe-page .moradores-table td:nth-child(2) {
+  width: 11%;
+}
+
+.condominio-detalhe-page .moradores-table th:nth-child(3),
+.condominio-detalhe-page .moradores-table td:nth-child(3) {
+  width: 11%;
+}
+
+.condominio-detalhe-page .moradores-table th:nth-child(4),
+.condominio-detalhe-page .moradores-table td:nth-child(4) {
+  width: 16%;
+}
+
+.condominio-detalhe-page .moradores-table th:nth-child(5),
+.condominio-detalhe-page .moradores-table td:nth-child(5) {
+  width: 20%;
+}
+
+.condominio-detalhe-page .moradores-table th:nth-child(6),
+.condominio-detalhe-page .moradores-table td:nth-child(6) {
+  width: 14%;
+}
+
+.condominio-detalhe-page .moradores-table .table-actions {
+  justify-content: center;
+}
+
+
+/* Moradores — Nome: label centralizada na coluna, dado permanece à esquerda */
+.condominio-detalhe-page .moradores-table th:first-child {
+  text-align: center;
+}
+
+.condominio-detalhe-page .moradores-table td:first-child {
+  text-align: left;
+}
+
+
+/* Moradores — ajuste final da coluna Nome.
+   O dado continua à esquerda e a label fica centralizada
+   exatamente sobre a largura ocupada pelo nome. */
+.condominio-detalhe-page .moradores-table th:first-child,
+.condominio-detalhe-page .moradores-table td:first-child {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.condominio-detalhe-page .moradores-table th:first-child {
+  text-align: left;
+  padding-left: 0;
+}
+
+.condominio-detalhe-page .moradores-table th:first-child::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+}
+
+.condominio-detalhe-page .moradores-table th:first-child {
+  text-align: center;
+}
+
+.condominio-detalhe-page .moradores-table td:first-child {
+  text-align: left;
+}
+
+
+/* ABA FORNECEDORES — aproxima Fornecedor e CNPJ sem alterar as demais abas */
+.condominio-detalhe-page .fornecedores-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.condominio-detalhe-page .fornecedores-table th,
+.condominio-detalhe-page .fornecedores-table td {
+  vertical-align: middle;
+  text-align: center;
+  padding: 8px 8px;
+}
+
+.condominio-detalhe-page .fornecedores-table th { font-size: 8px; }
+.condominio-detalhe-page .fornecedores-table td { font-size: 9px; }
+.condominio-detalhe-page .fornecedores-table td:first-child strong {
+  font-size: 9px;
+  font-weight: 600;
+}
+
+/* Distribuição visual uniforme: centros das colunas ficam próximos e regulares */
+.condominio-detalhe-page .fornecedores-table th:nth-child(1),
+.condominio-detalhe-page .fornecedores-table td:nth-child(1) { width: 20%; }
+
+.condominio-detalhe-page .fornecedores-table th:nth-child(2),
+.condominio-detalhe-page .fornecedores-table td:nth-child(2) { width: 22%; }
+
+.condominio-detalhe-page .fornecedores-table th:nth-child(3),
+.condominio-detalhe-page .fornecedores-table td:nth-child(3) { width: 21%; }
+
+.condominio-detalhe-page .fornecedores-table th:nth-child(4),
+.condominio-detalhe-page .fornecedores-table td:nth-child(4) { width: 20%; }
+
+.condominio-detalhe-page .fornecedores-table th:nth-child(5),
+.condominio-detalhe-page .fornecedores-table td:nth-child(5) { width: 17%; }
+
+.condominio-detalhe-page .fornecedores-table .table-actions {
+  justify-content: center;
+}
+
+
+/* FORNECEDORES — mesmo padrão visual da aba VEÍCULOS */
+.condominio-detalhe-page .fornecedores-table {
+  width: 100%;
+  min-width: 0;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+.condominio-detalhe-page .fornecedores-table col {
+  width: auto !important;
+}
+
+.condominio-detalhe-page .tab-panel .fornecedores-table th,
+.condominio-detalhe-page .tab-panel .fornecedores-table td {
+  padding: 9px 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.condominio-detalhe-page .tab-panel .fornecedores-table td:first-child {
+  text-align: left;
+}
+
+.condominio-detalhe-page .tab-panel .fornecedores-table th:first-child {
+  text-align: center;
+}
+
+.condominio-detalhe-page .fornecedores-table .table-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+
+/* =========================================================
+   PADRÃO ÚNICO DAS ABAS — referência visual: VEÍCULOS
+   Moradores, Veículos, Funcionários e Fornecedores
+   ========================================================= */
+.condominio-detalhe-page .tabela-padrao-veiculos {
+  width: 100%;
+  min-width: 0;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+.condominio-detalhe-page .tab-panel .tabela-padrao-veiculos th {
+  background: #f8fafc;
+  color: #6e7d93;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 9px 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.condominio-detalhe-page .tab-panel .tabela-padrao-veiculos td {
+  color: #334158;
+  font-size: 10px;
+  padding: 9px 10px;
+  border-top: 1px solid #edf1f6;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Primeira informação segue o comportamento visual da aba Veículos */
+.condominio-detalhe-page .tab-panel .tabela-padrao-veiculos td:first-child {
+  text-align: left;
+}
+
+.condominio-detalhe-page .tab-panel .tabela-padrao-veiculos th:first-child {
+  text-align: center;
+}
+
+.condominio-detalhe-page .tabela-padrao-veiculos .table-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* Neutraliza larguras específicas antigas de Moradores/Fornecedores */
+.condominio-detalhe-page .moradores-table th,
+.condominio-detalhe-page .moradores-table td,
+.condominio-detalhe-page .fornecedores-table th,
+.condominio-detalhe-page .fornecedores-table td {
+  width: auto !important;
+}
+
+/* =========================================================
+   UNIDADES — mesma linguagem visual da aba Veículos
+   Mantém o conteúdo próprio da unidade, mas elimina o card
+   visualmente diferente e usa linha branca com cabeçalho.
+   ========================================================= */
+.condominio-detalhe-page .unidades-layout-padrao {
+  display: block;
+  width: 100%;
+  border: 1px solid #e2e9f2;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.condominio-detalhe-page .unidades-layout-padrao .unit-card-layout {
+  border: 0;
+  border-radius: 0;
+  border-top: 1px solid #edf1f6;
+  padding: 12px 18px;
+  background: #fff;
+}
+
+.condominio-detalhe-page .unidades-layout-padrao .unit-card-layout:first-child {
+  border-top: 0;
+}
+
+.condominio-detalhe-page .unidades-layout-padrao .unit-field b,
+.condominio-detalhe-page .unidades-layout-padrao .unit-bottom-left > b,
+.condominio-detalhe-page .unidades-layout-padrao .unit-bottom-right > b {
+  color: #6e7d93;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.condominio-detalhe-page .unidades-layout-padrao .unit-field span,
+.condominio-detalhe-page .unidades-layout-padrao .unit-values span {
+  color: #334158;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   ABA UNIDADES — PADRÃO FINAL EM LINHA
+   ========================================================= */
+.condominio-detalhe-page .unidades-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.condominio-detalhe-page .unidades-table th,
+.condominio-detalhe-page .unidades-table td {
+  width: 16.6667%;
+  padding: 9px 10px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.condominio-detalhe-page .unidades-table th {
+  background: #f8fafc;
+  color: #6e7d93;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.condominio-detalhe-page .unidades-table td {
+  color: #334158;
+  font-size: 10px;
+  border-top: 1px solid #edf1f6;
+}
+
+.condominio-detalhe-page .unidades-table .table-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+@media (max-width: 850px) {
+  .condominio-detalhe-page .table-container { overflow-x: auto; }
+  .condominio-detalhe-page .unidades-table { min-width: 760px; }
+}
+
+
+/* =========================================================
+   FORNECEDORES — MESMA GEOMETRIA VISUAL DA ABA VEÍCULOS
+   ========================================================= */
+.condominio-detalhe-page .fornecedores-table.layout-veiculos-5 {
+  width: 100%;
+  table-layout: fixed !important;
+  border-collapse: collapse;
+}
+
+.condominio-detalhe-page .fornecedores-table.layout-veiculos-5 th,
+.condominio-detalhe-page .fornecedores-table.layout-veiculos-5 td {
+  box-sizing: border-box;
+  padding: 9px 10px;
+  vertical-align: middle;
+  text-align: center !important;
+  font-size: 9px;
+}
+
+/* Centros equivalentes ao layout aprovado de Veículos */
+.condominio-detalhe-page .fornecedores-table.layout-veiculos-5 th:nth-child(1),
+.condominio-detalhe-page .fornecedores-table.layout-veiculos-5 td:nth-child(1) { width: 14% !important; }
+.condominio-detalhe-page .fornecedores-table.layout-veiculos-5 th:nth-child(2),
+.condominio-detalhe-page .fornecedores-table.layout-veiculos-5 td:nth-child(2) { width: 24% !important; }
+.condominio-detalhe-page .fornecedores-table.layout-veiculos-5 th:nth-child(3),
+.condominio-detalhe-page .fornecedores-table.layout-veiculos-5 td:nth-child(3) { width: 16% !important; }
+.condominio-detalhe-page .fornecedores-table.layout-veiculos-5 th:nth-child(4),
+.condominio-detalhe-page .fornecedores-table.layout-veiculos-5 td:nth-child(4) { width: 31% !important; }
+.condominio-detalhe-page .fornecedores-table.layout-veiculos-5 th:nth-child(5),
+.condominio-detalhe-page .fornecedores-table.layout-veiculos-5 td:nth-child(5) { width: 15% !important; }
+
+.condominio-detalhe-page .fornecedores-table.layout-veiculos-5 td:first-child {
+  text-align: left !important;
+}
+
+.condominio-detalhe-page .fornecedores-table.layout-veiculos-5 .table-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* Ajuste final — Aba Unidades: tipografia igual ao padrão visual aprovado */
+.condominio-detalhe-page .unidades-table th {
+  font-size: 8px !important;
+  font-weight: 600;
+}
+
+.condominio-detalhe-page .unidades-table td {
+  font-size: 9px !important;
+}
+
+
+/* =========================================================
+   UNIDADES — CORREÇÃO DEFINITIVA DA TABELA
+   Tipo e Situação separados + responsividade sem sobreposição
+   ========================================================= */
+.condominio-detalhe-page .unidades-table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.condominio-detalhe-page .unidades-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  min-width: 820px;
+}
+.condominio-detalhe-page .unidades-table th,
+.condominio-detalhe-page .unidades-table td {
+  box-sizing: border-box;
+  padding: 10px 8px;
+  font-size: 12px;
+  line-height: 1.35;
+  vertical-align: middle;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.condominio-detalhe-page .unidades-table th { font-size: 10px; }
+.condominio-detalhe-page .unidades-table th:nth-child(1),
+.condominio-detalhe-page .unidades-table td:nth-child(1) { width: 8%; }
+.condominio-detalhe-page .unidades-table th:nth-child(2),
+.condominio-detalhe-page .unidades-table td:nth-child(2) { width: 9%; }
+.condominio-detalhe-page .unidades-table th:nth-child(3),
+.condominio-detalhe-page .unidades-table td:nth-child(3) { width: 25%; }
+.condominio-detalhe-page .unidades-table th:nth-child(4),
+.condominio-detalhe-page .unidades-table td:nth-child(4) { width: 14%; }
+.condominio-detalhe-page .unidades-table th:nth-child(5),
+.condominio-detalhe-page .unidades-table td:nth-child(5) { width: 13%; }
+.condominio-detalhe-page .unidades-table th:nth-child(6),
+.condominio-detalhe-page .unidades-table td:nth-child(6) { width: 18%; }
+.condominio-detalhe-page .unidades-table th:nth-child(7),
+.condominio-detalhe-page .unidades-table td:nth-child(7) { width: 13%; }
+.condominio-detalhe-page .unidades-table .unit-residents,
+.condominio-detalhe-page .unidades-table .unit-vehicles { overflow-wrap: anywhere; }
+.condominio-detalhe-page .unit-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 25px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.condominio-detalhe-page .unit-type { background:#eaf2ff; color:#1769d2; }
+.condominio-detalhe-page .unit-type-casa { background:#f2edff; color:#7048c7; }
+.condominio-detalhe-page .unit-type-sala { background:#fff3e4; color:#b96808; }
+.condominio-detalhe-page .unit-type-loja { background:#e8f8f6; color:#087e73; }
+.condominio-detalhe-page .unit-type-outro { background:#eef1f5; color:#58677c; }
+.condominio-detalhe-page .unit-status-ocupada { background:#e8f8ee; color:#16864b; }
+.condominio-detalhe-page .unit-status-vaga { background:#fff3dc; color:#a86700; }
+
+@media (max-width: 900px) {
+  .condominio-detalhe-page .unidades-table { min-width: 760px; }
+}
+
+@media (max-width: 600px) {
+  .condominio-detalhe-page .unidades-table-container { border: 0; overflow: visible; }
+  .condominio-detalhe-page .unidades-table { min-width: 0; table-layout: auto; }
+  .condominio-detalhe-page .unidades-table thead { display: none; }
+  .condominio-detalhe-page .unidades-table,
+  .condominio-detalhe-page .unidades-table tbody,
+  .condominio-detalhe-page .unidades-table tr,
+  .condominio-detalhe-page .unidades-table td { display: block; width: 100% !important; }
+  .condominio-detalhe-page .unidades-table tr {
+    margin-bottom: 12px;
+    border: 1px solid #e2e9f2;
+    border-radius: 8px;
+    background: #fff;
+    overflow: hidden;
+  }
+  .condominio-detalhe-page .unidades-table td {
+    display: grid;
+    grid-template-columns: 92px minmax(0,1fr);
+    gap: 10px;
+    align-items: center;
+    min-height: 40px;
+    padding: 8px 10px;
+    text-align: left !important;
+    border-top: 1px solid #edf1f6;
+  }
+  .condominio-detalhe-page .unidades-table td:first-child { border-top: 0; }
+  .condominio-detalhe-page .unidades-table td::before {
+    content: attr(data-label);
+    color: #6e7d93;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .condominio-detalhe-page .unidades-table .table-actions { justify-content: flex-start; }
+  .condominio-detalhe-page .unit-badge { justify-self: start; }
+}
+
+/* MORADORES — cores por vínculo */
+.condominio-detalhe-page .vinculo-badge{
+ display:inline-flex;align-items:center;justify-content:center;
+ min-width:78px;padding:4px 9px;border-radius:999px;
+ font-size:10px;font-weight:700;line-height:1.2;white-space:nowrap;
+}
+.condominio-detalhe-page .vinculo-proprietario{color:#166534;background:#dcfce7}
+.condominio-detalhe-page .vinculo-morador{color:#1d4ed8;background:#dbeafe}
+.condominio-detalhe-page .vinculo-inquilino{color:#b45309;background:#fef3c7}
+.condominio-detalhe-page .vinculo-dependente{color:#7e22ce;background:#f3e8ff}
+@media(max-width:700px){
+ .condominio-detalhe-page .vinculo-badge{min-width:0;font-size:10px;padding:4px 8px}
+}
+
+/* =========================================================
+   DADOS DO CONDOMÍNIO — PADRÃO VISUAL CONDOPRIME
+   Ajuste apenas da apresentação da aba Dados.
+   ========================================================= */
+.condominio-detalhe-page .details-card {
+  padding: 14px 16px 16px;
+  border: 1px solid #e2e9f2;
+  border-radius: 7px;
+  background: #fff;
+}
+
+.condominio-detalhe-page .details-card::before {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #25324a;
+}
+
+.condominio-detalhe-page .details-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  border: 1px solid #e7edf5;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.condominio-detalhe-page .details-grid > div {
+  min-width: 0;
+  min-height: 62px;
+  padding: 10px 12px;
+  border: 0;
+  border-right: 1px solid #edf1f6;
+  border-bottom: 1px solid #edf1f6;
+  border-radius: 0;
+  background: #fff;
+}
+
+.condominio-detalhe-page .details-grid > div:nth-child(4n) {
+  border-right: 0;
+}
+
+.condominio-detalhe-page .details-grid > div:nth-last-child(-n + 4) {
+  border-bottom: 0;
+}
+
+.condominio-detalhe-page .details-grid dt {
+  margin: 0 0 5px;
+  color: #8491a5;
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.condominio-detalhe-page .details-grid dd {
+  margin: 0;
+  color: #25324a;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1050px) {
+  .condominio-detalhe-page .details-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .condominio-detalhe-page .details-grid > div {
+    border-right: 1px solid #edf1f6;
+    border-bottom: 1px solid #edf1f6;
+  }
+  .condominio-detalhe-page .details-grid > div:nth-child(2n) {
+    border-right: 0;
+  }
+  .condominio-detalhe-page .details-grid > div:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .condominio-detalhe-page .details-card {
+    padding: 12px;
+  }
+  .condominio-detalhe-page .details-grid {
+    grid-template-columns: 1fr;
+  }
+  .condominio-detalhe-page .details-grid > div,
+  .condominio-detalhe-page .details-grid > div:nth-child(2n),
+  .condominio-detalhe-page .details-grid > div:nth-child(4n),
+  .condominio-detalhe-page .details-grid > div:nth-last-child(-n + 2),
+  .condominio-detalhe-page .details-grid > div:nth-last-child(-n + 4) {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid #edf1f6;
+  }
+  .condominio-detalhe-page .details-grid > div:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* Ajuste final solicitado — sem alteração de layout */
+.condominio-detalhe-page .details-card::before {
+  font-size: 14px;
+}
+
+.condominio-detalhe-page .details-grid dt {
+  font-size: 12px;
+}
+
+.condominio-detalhe-page .details-grid dd {
+  font-size: 13px;
+}
+
+/* Acabamento UX — visão geral */
+.details-grid{align-items:stretch}
+.details-grid>div{min-height:58px;transition:border-color .15s ease,box-shadow .15s ease}
+.details-grid>div:hover{border-color:#d6e2f0;box-shadow:0 2px 8px rgba(37,50,74,.04)}
+.detail-info-status{display:inline-flex;align-items:center;width:max-content;padding:4px 9px;border-radius:999px;font-size:9px;font-weight:700;line-height:1}
+.detail-info-status.active{color:#168a50;background:#e8f8ef;border:1px solid #cdeedb}
+.detail-info-status.inactive{color:#66758a;background:#f0f3f7;border:1px solid #e0e6ed}
+.details-observacoes{grid-column:span 2;min-height:58px!important}
+.details-observacoes dd{font-weight:500;line-height:1.45}
+.condo-tabs-modern .tab-count{min-width:18px;height:18px;padding:0 6px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:#eaf3ff;color:#0877f9;font-size:9px;font-weight:700;line-height:1}
+.condo-tabs-modern button.active .tab-count{background:#0877f9;color:#fff}
+@media(max-width:850px){.details-observacoes{grid-column:span 2}}
+@media(max-width:600px){.details-observacoes{grid-column:auto}}
+
+
+/* =========================================================
+   ACABAMENTO FINAL — INFORMAÇÕES DO CONDOMÍNIO
+   Cards independentes, suaves e arredondados.
+   ========================================================= */
+.condominio-detalhe-page .details-card{
+  padding:18px;
+  border:1px solid #e1e8f1;
+  border-radius:14px;
+  background:#fff;
+  box-shadow:0 4px 14px rgba(31,55,88,.035);
+}
+.condominio-detalhe-page .details-card::before{
+  margin:0 0 14px;
+  font-size:14px;
+  line-height:1.3;
+}
+.condominio-detalhe-page .details-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  margin:0;
+  padding:0;
+  border:0;
+  border-radius:0;
+  overflow:visible;
+  background:transparent;
+}
+.condominio-detalhe-page .details-grid>div,
+.condominio-detalhe-page .details-grid>div:nth-child(2n),
+.condominio-detalhe-page .details-grid>div:nth-child(4n),
+.condominio-detalhe-page .details-grid>div:nth-last-child(-n + 2),
+.condominio-detalhe-page .details-grid>div:nth-last-child(-n + 4){
+  min-width:0;
+  min-height:78px;
+  padding:14px 15px;
+  border:1px solid #e4ebf4;
+  border-radius:12px;
+  background:#fbfcfe;
+  box-shadow:0 1px 2px rgba(31,55,88,.025);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.condominio-detalhe-page .details-grid>div:hover{
+  border-color:#d5e2f2;
+  background:#fff;
+  box-shadow:0 5px 14px rgba(31,55,88,.055);
+}
+.condominio-detalhe-page .details-grid dt{
+  margin:0 0 7px;
+  color:#7b8aa1;
+  font-size:12px;
+  font-weight:600;
+  line-height:1.2;
+  text-transform:uppercase;
+  letter-spacing:.01em;
+}
+.condominio-detalhe-page .details-grid dd{
+  margin:0;
+  color:#17263d;
+  font-size:13px;
+  font-weight:600;
+  line-height:1.45;
+  overflow-wrap:anywhere;
+}
+.condominio-detalhe-page .details-observacoes{grid-column:span 2;min-height:78px!important}
+.condominio-detalhe-page .detail-info-status{font-size:11px;padding:5px 10px}
+@media(max-width:1050px){
+ .condominio-detalhe-page .details-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+ .condominio-detalhe-page .details-card{padding:14px;border-radius:12px}
+ .condominio-detalhe-page .details-grid{grid-template-columns:1fr;gap:10px}
+ .condominio-detalhe-page .details-grid>div,
+ .condominio-detalhe-page .details-grid>div:nth-child(2n),
+ .condominio-detalhe-page .details-grid>div:nth-child(4n),
+ .condominio-detalhe-page .details-grid>div:nth-last-child(-n + 2),
+ .condominio-detalhe-page .details-grid>div:nth-last-child(-n + 4){min-height:70px;border:1px solid #e4ebf4;border-radius:11px}
+ .condominio-detalhe-page .details-observacoes{grid-column:auto}
+}
+
+
+/* ACABAMENTO PREMIUM — Informações do condomínio */
+.condominio-detalhe-page .details-card{
+  background:#fff;border:1px solid #e1e8f0;border-radius:14px;padding:0;
+  overflow:hidden;box-shadow:0 4px 16px rgba(35,55,80,.045)
+}
+.condominio-detalhe-page .details-card::before{
+  content:'Informações do condomínio';display:block;margin:0;padding:16px 20px 13px;
+  border-bottom:1px solid #edf1f5;color:#18263a;font-size:14px;font-weight:700;line-height:1.2
+}
+.condominio-detalhe-page .details-grid{
+  display:grid;grid-template-columns:1.25fr 1fr 1fr 1fr;
+  grid-template-areas:"nome nome nome status" "cnpj telefone email email" "endereco endereco cidade cidade" "obs obs obs obs";
+  gap:0;margin:0;padding:0 20px 4px;background:#fff
+}
+.condominio-detalhe-page .details-grid>div,
+.condominio-detalhe-page .details-grid>div:nth-child(2n),
+.condominio-detalhe-page .details-grid>div:nth-child(4n),
+.condominio-detalhe-page .details-grid>div:nth-last-child(-n + 2),
+.condominio-detalhe-page .details-grid>div:nth-last-child(-n + 4){
+  min-height:auto;padding:14px 14px 14px 0;margin:0;border:0;border-radius:0;
+  background:transparent;box-shadow:none;transition:none
+}
+.condominio-detalhe-page .details-grid>div:hover{
+  border:0;background:transparent;box-shadow:none;transform:none
+}
+.condominio-detalhe-page .details-grid>div:nth-child(1){grid-area:nome}
+.condominio-detalhe-page .details-grid>div:nth-child(2){grid-area:cnpj}
+.condominio-detalhe-page .details-grid>div:nth-child(3){grid-area:email}
+.condominio-detalhe-page .details-grid>div:nth-child(4){grid-area:telefone}
+.condominio-detalhe-page .details-grid>div:nth-child(5){grid-area:endereco}
+.condominio-detalhe-page .details-grid>div:nth-child(6){grid-area:cidade}
+.condominio-detalhe-page .details-grid>div:nth-child(7){grid-area:status;padding-left:18px}
+.condominio-detalhe-page .details-grid>div:nth-child(8){grid-area:obs;padding-bottom:16px}
+
+.condominio-detalhe-page .details-grid>div:nth-child(1),
+.condominio-detalhe-page .details-grid>div:nth-child(7),
+.condominio-detalhe-page .details-grid>div:nth-child(2),
+.condominio-detalhe-page .details-grid>div:nth-child(4),
+.condominio-detalhe-page .details-grid>div:nth-child(3),
+.condominio-detalhe-page .details-grid>div:nth-child(5),
+.condominio-detalhe-page .details-grid>div:nth-child(6){border-bottom:1px solid #f0f3f7}
+.condominio-detalhe-page .details-grid>div:nth-child(7){border-left:1px solid #f0f3f7}
+
+.condominio-detalhe-page .details-grid dt{
+  margin:0 0 6px;color:#7a8aa2;font-size:12px;font-weight:600;
+  line-height:1.15;letter-spacing:.015em;text-transform:uppercase
+}
+.condominio-detalhe-page .details-grid dd{
+  margin:0;color:#172235;font-size:13px;font-weight:600;line-height:1.45
+}
+.condominio-detalhe-page .details-grid>div:first-child dd{font-size:14px;font-weight:700}
+.condominio-detalhe-page .detail-info-status{
+  display:inline-flex;align-items:center;width:max-content;padding:5px 10px;
+  border-radius:999px;font-size:11px;font-weight:700;line-height:1
+}
+.condominio-detalhe-page .detail-info-status.active{
+  color:#137a48;background:#eaf8f0;border:1px solid #ccebd9
+}
+.condominio-detalhe-page .detail-info-status.inactive{
+  color:#68768a;background:#f2f4f7;border:1px solid #e0e5eb
+}
+.condominio-detalhe-page .details-observacoes{min-height:auto!important}
+.condominio-detalhe-page .details-observacoes dd{font-weight:500}
+
+@media(max-width:850px){
+ .condominio-detalhe-page .details-grid{
+   grid-template-columns:1fr 1fr;
+   grid-template-areas:"nome status" "cnpj telefone" "email email" "endereco endereco" "cidade cidade" "obs obs";
+   padding:0 16px 4px
+ }
+ .condominio-detalhe-page .details-grid>div:nth-child(7){padding-left:14px}
+}
+@media(max-width:600px){
+ .condominio-detalhe-page .details-card{border-radius:12px}
+ .condominio-detalhe-page .details-card::before{padding:15px 16px 12px}
+ .condominio-detalhe-page .details-grid{display:block;padding:0 16px 4px}
+ .condominio-detalhe-page .details-grid>div,
+ .condominio-detalhe-page .details-grid>div:nth-child(7){
+   padding:12px 0;border-left:0;border-bottom:1px solid #f0f3f7
+ }
+ .condominio-detalhe-page .details-grid>div:last-child{border-bottom:0}
+}
+
+/* =========================================================
+   RESPONSIVIDADE FINAL — ABA UNIDADES
+   Mantém o desktop aprovado e reorganiza a tabela em cards
+   somente quando a área útil fica estreita.
+   ========================================================= */
+.condominio-detalhe-page .alert{
+  margin:0 0 12px;
+  padding:9px 12px;
+  border:1px solid #d8eadf;
+  border-radius:9px;
+  background:#f3fbf6;
+  color:#27734a;
+  font-size:11px;
+  line-height:1.35;
+}
+
+.condominio-detalhe-page .unidades-table-container{
+  width:100%;
+  overflow:hidden;
+  border-radius:10px;
+}
+
+.condominio-detalhe-page .unidades-table{
+  width:100%;
+  table-layout:auto;
+}
+
+.condominio-detalhe-page .unidades-table th,
+.condominio-detalhe-page .unidades-table td{
+  vertical-align:middle;
+}
+
+.condominio-detalhe-page .unidades-table .unit-residents,
+.condominio-detalhe-page .unidades-table .unit-vehicles{
+  white-space:normal;
+  overflow-wrap:anywhere;
+  line-height:1.4;
+}
+
+@media (max-width: 900px){
+  .condominio-detalhe-page{
+    padding-left:18px;
+    padding-right:18px;
+  }
+
+  .condominio-detalhe-page .condominio-detalhe-header{
+    gap:12px;
+  }
+
+  .condominio-detalhe-page .condo-tabs-modern{
+    gap:18px;
+    scrollbar-width:thin;
+  }
+
+  .condominio-detalhe-page .tab-panel{
+    padding:14px;
+    border-radius:10px;
+  }
+
+  .condominio-detalhe-page .section-toolbar{
+    gap:12px;
+  }
+
+  .condominio-detalhe-page .unidades-table-container{
+    border:0;
+    overflow:visible;
+    background:transparent;
+  }
+
+  .condominio-detalhe-page .unidades-table,
+  .condominio-detalhe-page .unidades-table tbody,
+  .condominio-detalhe-page .unidades-table tr,
+  .condominio-detalhe-page .unidades-table td{
+    display:block;
+    width:100%;
+  }
+
+  .condominio-detalhe-page .unidades-table thead{
+    display:none;
+  }
+
+  .condominio-detalhe-page .unidades-table tbody{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px;
+  }
+
+  .condominio-detalhe-page .unidades-table tr{
+    position:relative;
+    padding:14px 14px 12px;
+    border:1px solid #e2e9f2;
+    border-radius:12px;
+    background:#fff;
+    box-shadow:0 2px 8px rgba(31,55,88,.035);
+  }
+
+  .condominio-detalhe-page .unidades-table td{
+    display:grid;
+    grid-template-columns:92px minmax(0,1fr);
+    gap:10px;
+    align-items:start;
+    padding:7px 0;
+    border:0;
+    border-bottom:1px solid #f0f3f7;
+    text-align:left !important;
+    font-size:11px;
+  }
+
+  .condominio-detalhe-page .unidades-table td::before{
+    content:attr(data-label);
+    color:#7a8799;
+    font-size:9px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.02em;
+  }
+
+  .condominio-detalhe-page .unidades-table td:last-child{
+    border-bottom:0;
+    padding-bottom:0;
+  }
+
+  .condominio-detalhe-page .unidades-table td:last-child .table-actions{
+    justify-content:flex-start;
+  }
+}
+
+@media (max-width: 700px){
+  .condominio-detalhe-page{
+    padding:18px 16px 24px;
+  }
+
+  .condominio-detalhe-page .condominio-detalhe-header{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .condominio-detalhe-page .condominio-detalhe-header .page-actions{
+    width:100%;
+    justify-content:flex-start;
+  }
+
+  .condominio-detalhe-page .section-toolbar{
+    align-items:flex-start;
+  }
+
+  .condominio-detalhe-page .unidades-table tbody{
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width: 480px){
+  .condominio-detalhe-page .section-toolbar{
+    flex-direction:column;
+  }
+
+  .condominio-detalhe-page .section-toolbar .btn-primary{
+    width:100%;
+    justify-content:center;
+  }
+
+  .condominio-detalhe-page .unidades-table td{
+    grid-template-columns:82px minmax(0,1fr);
+  }
+}
+
+
+/* Situação da unidade: compatibilidade com valor "Desocupada" vindo da API/banco */
+.condominio-detalhe-page .unit-status-desocupada {
+  background: #fff3dc;
+  color: #a86700;
+  border: 1px solid #f0d49b;
+}
+
+
+/* =========================================================
+   VÍNCULOS DOS MORADORES — PADRÃO VISUAL CONDOPRIME
+   ========================================================= */
+.condominio-detalhe-page .resident-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:max-content;
+  padding:5px 10px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:700;
+  line-height:1;
+  white-space:nowrap;
+}
+
+/* Residente */
+.condominio-detalhe-page .resident-link-residente{
+  color:#1769aa;
+  background:#eaf4ff;
+  border:1px solid #cfe5fb;
+}
+
+/* Dependente */
+.condominio-detalhe-page .resident-link-dependente{
+  color:#7b2cbf;
+  background:#f3e8ff;
+  border:1px solid #e4d0fa;
+}
+
+/* Proprietário */
+.condominio-detalhe-page .resident-link-proprietario{
+  color:#137a48;
+  background:#eaf8f0;
+  border:1px solid #ccebd9;
+}
+
+/* Inquilino */
+.condominio-detalhe-page .resident-link-inquilino{
+  color:#a85c00;
+  background:#fff2df;
+  border:1px solid #f1d3a3;
+}
+
+
+/* VÍNCULOS MORADORES — CORES POR TIPO */
+.condominio-detalhe-page .vinculo-badge{
+  display:inline-flex;align-items:center;justify-content:center;width:max-content;
+  padding:5px 10px;border-radius:999px;font-size:10px;font-weight:700;
+  line-height:1;white-space:nowrap;border:1px solid transparent;
+}
+.condominio-detalhe-page .vinculo-residente,
+.condominio-detalhe-page .vinculo-morador{
+  color:#1769aa;background:#eaf4ff;border-color:#cfe5fb;
+}
+.condominio-detalhe-page .vinculo-dependente{
+  color:#7b2cbf;background:#f3e8ff;border-color:#e4d0fa;
+}
+.condominio-detalhe-page .vinculo-proprietario{
+  color:#137a48;background:#eaf8f0;border-color:#ccebd9;
+}
+.condominio-detalhe-page .vinculo-inquilino{
+  color:#a85c00;background:#fff2df;border-color:#f1d3a3;
+}
+.condominio-detalhe-page .vinculo-sindico{
+  color:#0f6f73;background:#e6f7f7;border-color:#bfe5e5;
+}
+
+
+/* VÍNCULOS ATIVOS — cadastro: Proprietário, Dependente e Inquilino */
+.condominio-detalhe-page .vinculo-proprietario{
+  color:#137a48;
+  background:#eaf8f0;
+  border-color:#ccebd9;
+}
+.condominio-detalhe-page .vinculo-dependente{
+  color:#7b2cbf;
+  background:#f3e8ff;
+  border-color:#e4d0fa;
+}
+.condominio-detalhe-page .vinculo-inquilino{
+  color:#a85c00;
+  background:#fff2df;
+  border-color:#f1d3a3;
+}
